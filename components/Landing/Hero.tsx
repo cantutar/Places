@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SearchableInput from "../SearchableInput";
 import LandingNavbar from "./LandingNavbar";
 
 const imageLink =
@@ -14,15 +15,16 @@ function Hero() {
             Everyone Looks for a{" "}
             <span className="font-righteous rgb">Place</span>
           </h1>
-          <div className="mt-10 md:mt-32 px-4 ">
+          <div className="mt-10 md:mt-32 px-4">
             <h6 className="text-3xl font-semibold mx-auto">
-              What place you want to check?
+              What <span className="font-bold">place</span> you want to check?
             </h6>
             <div className="flex justify-between items-center mt-4 lg:px-4">
               <input
                 type="text"
-                className="rounded-l w-full h-12 md:h-16 lg:h-12 border border-black"
+                className="rounded-l w-full h-12 md:h-16 lg:h-12 border border-black md:text-3xl"
               />
+              {/* <SearchableInput /> */}
               <button className="rounded-r bg-black text-white h-12 md:h-16 lg:h-12 px-4">
                 Search
               </button>
@@ -36,6 +38,7 @@ function Hero() {
             width={752}
             height={1162}
             layout="responsive"
+            priority={true}
           />
         </div>
       </section>

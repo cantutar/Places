@@ -37,10 +37,10 @@ function Footer() {
             className="flex flex-col justify-center items-center"
             key={index}
           >
-            <h3 className="text-2xl first-line:font-semibold underline">
+            <h3 className="text-xl md:text-2xl font-semibold underline">
               {item.title}
             </h3>
-            <div className="flex flex-col justify-center items-center font-semibold">
+            <div className="flex flex-col justify-center items-center md:font-semibold">
               {item.content.map((contentItem, index) => (
                 <span key={index}>{contentItem.section}</span>
               ))}

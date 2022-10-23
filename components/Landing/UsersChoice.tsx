@@ -13,7 +13,7 @@ function UsersChoice() {
         <h4 className="text-2xl lg:text-6xl">
           Placers Choice Best of the Best
         </h4>
-        <button className="bg-black rounded-2xl px-4 py-1 lg:text-3xl lg:px-8 lg:py-2">
+        <button className="bg-black rounded-2xl my-4 md:mt-2 md:my-0 px-4 py-1 lg:text-3xl lg:px-8 lg:py-2">
           Join us
         </button>
       </div>
@@ -24,6 +24,8 @@ function UsersChoice() {
           width="350"
           height="350"
           layout="responsive"
+          objectFit="cover"
+          className="rounded"
         />
       </div>
     </section>

@@ -1,7 +1,5 @@
 import Image from "next/image";
-
-const firstImage =
-  "https://images.unsplash.com/photo-1533105079780-92b9be482077?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80";
+import Shimmer, { toBase64 } from "../Loading";
 
 const firstImagesArray = [
   {
@@ -47,19 +45,21 @@ function Featured() {
       <div className="flex justify-between items-center mt-10 lg:mt-20 gap-x-4">
         {firstImagesArray.map((image, index) => {
           return (
-            <div
-              className="w-full h-full bg-slate-500 relative rounded"
-              key={index}
-            >
-              <div className="h-1/2 w-auto bg-slate-500 relative rounded">
-                <Image
-                  src={image.image}
-                  alt="first image"
-                  width="350"
-                  height="400"
-                  layout="responsive"
-                />
-              </div>
+            <div className="h-full w-full relative" key={index}>
+              <Image
+                src={image.image}
+                alt="first image"
+                width="350"
+                height="400"
+                layout="responsive"
+                objectFit="cover"
+                className="rounded"
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                  Shimmer(350, 400)
+                )}`}
+              />
             </div>
           );
         })}
@@ -71,20 +71,24 @@ function Featured() {
               className="w-full h-full bg-slate-500 relative rounded"
               key={index}
             >
-              <div className="h-1/2 w-auto bg-slate-500 relative rounded">
-                <Image
-                  src={image.image}
-                  alt="first image"
-                  width="350"
-                  height="400"
-                  layout="responsive"
-                />
-              </div>
+              <Image
+                src={image.image}
+                alt="first image"
+                width="350"
+                height="400"
+                layout="responsive"
+                objectFit="cover"
+                className="rounded"
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                  Shimmer(350, 400)
+                )}`}
+              />
             </div>
           );
         })}
       </div>
-      <div className="flex justify-between items-center"></div>
     </section>
   );
 }
