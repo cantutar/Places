@@ -1,6 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Featured from "../components/Landing/Featured";
 import Hero from "../components/Landing/Hero";
+import Trust from "../components/Landing/Parallax";
+import UsersChoice from "../components/Landing/UsersChoice";
+import Footer from "../components/Layout/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +20,10 @@ const Home: NextPage = () => {
 
       <main>
         <Hero />
+        <Featured />
+        <Trust />
+        <UsersChoice />
+        <Footer />
       </main>
     </>
   );

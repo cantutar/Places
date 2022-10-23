@@ -6,7 +6,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: { righteous: ["Righteous", "cursive"] },
+      colors: { claretRed: "#A60A33", darkGreen: "#004F32" },
+      fontFamily: {
+        righteous: ["Righteous", "cursive"],
+        DancingScript: ["Dancing Script", "cursive"],
+      },
     },
   },
   plugins: [],
